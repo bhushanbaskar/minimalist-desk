@@ -1,0 +1,98 @@
+:root,
+[data-theme='light'] {
+    /* Light Theme Colors */
+    --bg-color: #fbfbfb;
+    --text-color: #111111;
+    --card-bg: #ffffff;
+    --accent-color: #007bff;
+    /* For buttons/links */
+    --border-color: #ddd;
+    --success-color: #28a745;
+    /* For completed */
+    --danger-color: #dc3545;
+    /* For delete */
+    --social-link: rgb(3, 112, 3);
+    --social-link-hover:rgb(44, 177, 44);
+    --hint-color: #555;
+    /* Transition */
+    --transition-speed: 0.3s ease;
+    
+}
+
+[data-theme='dark'] {
+    /* Dark Theme Colors */
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --card-bg: #1e1e1e;
+    --accent-color: #3399ff;
+    /* For buttons/links */
+    --border-color: #444;
+    --success-color: #28d17c;
+    /* For completed */
+    --danger-color: #ff4d4f;
+    /* For delete */
+    --social-link: rgb(9, 144, 9);
+    --social-link-hover:rgb(44, 177, 44);
+    --hint-color: #888;
+    /* Transition */
+    --transition-speed: 0.3s ease;
+}
+
+header .theme-toggle-btn {
+    margin: 15px auto;
+    box-sizing: content-box;
+    /* padding: 2px 20px; */
+    width: 100px;
+    /* border: 2px solid var(--border-color); */
+    /* border-radius: 13px; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr;
+    align-items: stretch;
+    justify-items: stretch;
+
+    .theme-mode-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        /* experiment */
+        position: relative;
+    }
+
+    /* experiment */
+    .theme-mode-btn.active::after {
+        content: "";
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 6px;
+        background-color: var(--text-color);
+        border-radius: 50%;
+        margin-top: 4px;
+    }
+
+    #light-mode-btn {
+        box-sizing: border-box;
+        background-color: var(--card-bg);
+
+        svg {
+            fill: var(--text-color);
+        }
+
+        border-bottom:2px solid var(--border-color);
+        border-radius: 13px 0 0 13px;
+    }
+
+    #night-mode-btn {
+        background-color: var(--text-color);
+
+        svg {
+            fill: var(--card-bg);
+        }
+
+        border-radius: 0 13px 13px 0;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minimalist productive ToDo</title>
+
+    <link rel="stylesheet" href="themestyle.css">
+    <link rel="stylesheet" href="style.css">
+    
+     <script src="stylescript.js" defer></script>
+    <script src="main-script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Minimalist Productive ToDo</h1>
+        <p class="tagline">Do less. Accomplish more.</p>
+        <div class="theme-toggle-btn">
+            <button type="button" id="light-mode-btn" class="theme-mode-btn" title="Light Theme">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M440-800v-120h80v120h-80Zm0 760v-120h80v120h-80Zm360-400v-80h120v80H800Zm-760 0v-80h120v80H40Zm708-252-56-56 70-72 58 58-72 70ZM198-140l-58-58 72-70 56 56-70 72Zm564 0-70-72 56-56 72 70-58 58ZM212-692l-72-70 58-58 70 72-56 56Zm268 452q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q67 0 113.5-46.5T640-480q0-67-46.5-113.5T480-640q-67 0-113.5 46.5T320-480q0 67 46.5 113.5T480-320Zm0-160Z"/></svg>
+
+            </button>
+            <button type="button" id="night-mode-btn" class="theme-mode-btn" title="Dark Theme">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M600-640 480-760l120-120 120 120-120 120Zm200 120-80-80 80-80 80 80-80 80ZM483-80q-84 0-157.5-32t-128-86.5Q143-253 111-326.5T79-484q0-146 93-257.5T409-880q-18 99 11 193.5T520-521q71 71 165.5 100T879-410q-26 144-138 237T483-80Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T463-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T159-484q0 135 94.5 229.5T483-160Zm-20-305Z"/></svg>
+            </button>
+        </div>
+    </header>
+    <nav class="navigation-bar">
+        <ul>
+            <li title="current tab"><a class="active-nav-tab" href="#index.html">todo</a></li>
+            <li class="li-coming-soon"><a class="yet-to-come" href="#notes.html">notes</a></li>
+            <li class="li-coming-soon"><a class="yet-to-come"  href="#weather.html">weather</a></li>
+            <li class="li-coming-soon"><a class="yet-to-come" href="#calclulator.html">calculator</a></li>
+        </ul>
+
+
+    </nav>
+
+    <main>
+        <section class="create">
+            <form id="task-form" name="task-form">
+                
+                    <input type="text" name="task" class="task-input js-task-input" id="js-task-input" placeholder="Task:"  autocomplete="off" autofocus="true">
+             
+               
+                    <input type="datetime-local" name="due-date" class="due-date js-due-date-input" id="js-due-date" placeholder="Due date:" autocomplete="off" >
+              
+
+                <button type="submit" id="add-task" >Add Task</button>
+            </form>
+        </section>
+        <section class="created-tasks">
+            <h2>Your Tasks</h2>
+            <ul id="task-list" class="task-list">
+                <!-- Tasks will be dynamically added here -->
+                <!-- <li class="task-item">
+                    <div class="task-info">
+                        <p class="task-name">Sample Task</p>
+                        <p class="task-due-date">06/07/2025, 09:00</p>
+                    </div>
+                    <button class="delete-task" title="mark as completed"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                            <path
+                                d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                        </svg></button>
+                </li> -->
+            </ul>
+        </section>
+        <section class="task-history">
+            <div class="task-history-heading">
+                <h2>Task History</h2>
+                <button name="delete-all" id="delete-all">Delete All</button>
+
+            </div>
+            <!-- Tasks will be dynamically added here -->
+            <ul id="deleted-task-list" class="deleted-task-list"></ul>
+            <!-- <li class="deleted-task-item">
+                <div class="task-info">
+                    <p class="task-name">Sample Task</p>
+                    <p class="task-due-date">06/07/2025, 09:00</p>
+                </div>
+                <button class="delete-task" title="mark as completed"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg></button>
+            </li> -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Minimalist Productive ToDo
+        Made with ❤️ by<a href="https://www.instagram.com/bhushan.baskar/" target="_blank" title="author's instagram profile"> Bhushan Baskar.</a></p>
+    </footer>
+   
+</body>
+
+</html>
