@@ -1,0 +1,8 @@
+<!-- Save this as favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark rounded background -->
+  <rect width="100" height="100" rx="20" ry="20" fill="#1e1e1e"/>
+  
+  <!-- White checkmark -->
+  <path d="M30 50 L45 65 L75 35" stroke="#ffffff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
