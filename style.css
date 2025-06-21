@@ -59,6 +59,13 @@ nav{
       font-size: 0.5em;
       color: var(--hint-color);
     }
+    
+    .new::after {
+      content: " (new✨)";
+      font-size: 0.5em;
+      color: var(--hint-color);
+    }
+    
     .active-nav-tab::after {
       content: "";
       display: block;
