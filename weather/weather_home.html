@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Minimalist Weather App | Real-Time Weather Forecast</title>
+  <meta name="title" content="Minimalist Weather App | Real-Time Weather Forecast">
+  <meta name="description" content="Get real-time weather updates for any city with this minimalist weather app. View temperature, humidity, and wind speed in a clean, modern UI.">
+  <meta name="keywords" content="weather app, minimalist weather, real-time forecast, temperature, humidity, wind speed, city weather, simple weather app">
+  <meta name="author" content="Your Name">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:title" content="Minimalist Weather App | Real-Time Weather Forecast">
+  <meta property="og:description" content="Enter a city name and get instant weather details including temperature, humidity, and wind speed.">
+  <meta property="og:image" content="F:\BHUSHAN\WEB DEVELOPMENT\projects\1A minimalist productive ToDo\1A weather app\assets\preview.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourdomain.com/">
+  <meta property="twitter:title" content="Minimalist Weather App | Real-Time Weather Forecast">
+  <meta property="twitter:description" content="Check the weather in your city instantly with our clean and fast weather app.">
+  <meta property="twitter:image" content="https://yourdomain.com/assets/og-preview.png">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1e1e1e">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="weather_style.css">
+</head>
+
+<body>
+  <main class="weather-app">
+    <h1 class="app-title">Weather App</h1>
+
+    <div class="search-box">
+      <input name="city-input" type="text" placeholder="Enter city name" class="city-input">
+      <button type="submit" name="get-weather-btn" class="get-weather-btn">Get Weather</button>
+    </div>
+    
+    <div class="error-msg">
+      <div class="forimg">
+        <img src="assets/weather-app-img/spell-check.png" alt="alert spelling cheack" class="error-img">
+        <a href="https://www.flaticon.com/free-icons/spelling" title="spelling icons">Spelling icons created by Freepik
+          - Flaticon</a>
+      </div>
+      <p class="error-text">&#9888; Invalid city name. Please check spelling!</p>
+    </div>
+
+    <div class="weather-card">
+
+      <div class="location">
+        <h2 class="city-name">pune</h2>
+      </div>
+      <div class="weather-icon-box">
+        <img src="assets/weather-app-img/images/rain.png" alt="rainy weather" class="weather-icon">
+        </span>
+      </div>
+      <div class="temperature">
+        <span class="temp-value">72</span>°c
+      </div>
+      <div class="weather-details">
+        <div class="humidity">
+          <p>Humidity</p>
+          <p class="humidity-value">60%</p>
+        </div>
+        <div class="separator"></div>
+        <div class="wind">
+          <p>Wind</p>
+          <p class="wind-value">5 km/hr</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="weather_script.js"></script>
+</body>
+
+</html>
