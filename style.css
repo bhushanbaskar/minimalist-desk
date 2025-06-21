@@ -61,7 +61,7 @@ nav{
     }
     
     .new::after {
-      content: " (new✨)";
+      content: "(new✦)";
       font-size: 0.5em;
       color: var(--hint-color);
     }
