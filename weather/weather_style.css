@@ -1,3 +1,27 @@
+.api-warning-note {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.api-warning-note strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.api-warning-note a {
+  color: #004085;
+  text-decoration: underline;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f2f2f2;
