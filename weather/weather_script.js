@@ -3,7 +3,7 @@
 // DOM elements
 const searchBox = document.querySelector('.city-input');
 const searchButton = document.querySelector('.get-weather-btn');
-const myAPI = prompt('enter your API before testing (this site don't have backend;');
+const myAPI = prompt("enter your API before testing (this site don't have backend;");
 
 // OpenWeatherMap API details
 const apiKey = `${myAPI}`;
