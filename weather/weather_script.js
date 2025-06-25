@@ -3,9 +3,10 @@
 // DOM elements
 const searchBox = document.querySelector('.city-input');
 const searchButton = document.querySelector('.get-weather-btn');
+const myAPI = prompt('enter your API before testing (this site don't have backend;');
 
 // OpenWeatherMap API details
-const apiKey = 'd1075876880a38ef7eb20912fcf98a55';
+const apiKey = `${myAPI}`;
 const apiURL = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 
 /**
